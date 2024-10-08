@@ -12,17 +12,45 @@ CloudShop is a cloud and React-based software marketplace platform designed to f
 ## Technical Stack
 
 ```mermaid
-graph TD;
-    React-->AntD;
-    AntD-->UI[Responsive UI];
-    React-->Authentication;
-    Authentication-->JWT;
-    Go-->GAE;
-    GAE-->Authentication;
-    ElasticSearch-->GCE;
-    StripeAPI-->Checkout;
-    GAE-->StripeAPI;
-    Checkout-->Review;
+graph TD
+    A[CloudShop Platform] --> B[Frontend]
+    A --> C[Backend]
+    A --> D[Services]
+    A --> E[Deployment]
+
+    B --> F[React.js]
+    B --> G[Ant Design]
+
+    C --> H[Go]
+    C --> I[JWT for Authentication]
+    C --> J[Google App Engine]
+
+    D --> K[ElasticSearch on Google Compute Engine]
+    D --> L[Stripe API for Payment Processing]
+
+    E --> N[Backend Microservices on Google App Engine]
+
+    subgraph Frontend
+        F
+        G
+    end
+
+    subgraph Backend
+        H
+        I
+        J
+    end
+
+    subgraph Services
+        K
+        L
+    end
+
+    subgraph Deployment
+        M
+        N
+    end
+
 
 ## Frontend
 - **React.js:** Handles the UI logic and rendering.
