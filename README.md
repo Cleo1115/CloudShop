@@ -52,19 +52,3 @@ graph TD
     end
 
 
-## Frontend
-- **React.js:** Handles the UI logic and rendering.
-- **Ant Design (AntD):** Used for designing a responsive and visually appealing user interface.
-
-## Backend
-- **Go:** Manages backend services, including user registration, authentication, and checkout workflows.
-- **JWT (JSON Web Tokens):** Provides secure and efficient user authentication.
-- **Google App Engine:** Hosts the Go microservices for scalable cloud hosting.
-
-## Services
-- **ElasticSearch:** Provides advanced search capabilities for the platform, hosted on Google Compute Engine.
-- **Stripe API:** Facilitates efficient payment processing and financial transactions.
-
-## Deployment
-- **Frontend:** Deployed as a static site on suitable hosting platforms.
-- **Backend and Services:** Go microservices are deployed on Google App Engine, with ElasticSearch on Google Compute Engine.
