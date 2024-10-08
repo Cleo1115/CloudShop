@@ -15,6 +15,7 @@ import (
     "github.com/pborman/uuid"
 )
 
+// UploadHandler handles the upload of an app
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
 // Parse from body of request to get a json object.
 fmt.Println("Received one upload request")
@@ -62,7 +63,7 @@ fmt.Println("App is saved successfully.")
 }
 
 
-
+// GetHandler handles the get of an app by id
 func searchHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println("Received one search request")
     w.Header().Set("Content-Type", "application/json")

@@ -11,6 +11,7 @@ import (
 
 )
 
+// InitRouter initializes the router
 func InitRouter() http.Handler {
 
     jwtMiddleware := jwtmiddleware.New(jwtmiddleware.Options{

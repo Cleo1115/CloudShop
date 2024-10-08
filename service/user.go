@@ -31,6 +31,7 @@ func CheckUser(username, password string) (bool, error) {
     return false, nil
 }
 
+// AddUser adds a user to the app
 func AddUser(user *model.User) (bool, error) {
     query := elastic.NewTermQuery("username", user.Username)
     searchResult, err := backend.ESBackend.ReadFromES(query, constants.USER_INDEX)

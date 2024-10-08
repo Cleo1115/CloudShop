@@ -1,4 +1,7 @@
 package model
+
+
+// App represents the structure of an app in the appstore
 type App struct {
 	Id          string `json:"id"`
 	User        string `json:"user"`
@@ -10,6 +13,7 @@ type App struct {
 	PriceID     string `json:"price_id"`
 }
 
+// User represents the structure of a user in the appstore
 type User struct {
     Username string `json:"username"`
     Password string `json:"password"`

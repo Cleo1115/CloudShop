@@ -15,7 +15,7 @@ import (
     "errors"
 )
 
-
+// SearchApps searches apps by title and description
 func SearchApps(title string, description string) ([]model.App, error) {
    if title == "" {
        return SearchAppsByDescription(description)

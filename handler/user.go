@@ -15,6 +15,7 @@ import (
 
 var mySigningKey = []byte("secret")
 
+// SigninHandler handles the signin of a user to the app
 func signinHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println("Received one signin request")
     w.Header().Set("Content-Type", "text/plain")
@@ -56,6 +57,7 @@ func signinHandler(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte(tokenString))
 }
 
+// SignupHandler handles the signup of a user to the app
 func signupHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println("Received one signup request")
     w.Header().Set("Content-Type", "text/plain")

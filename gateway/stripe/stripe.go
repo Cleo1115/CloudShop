@@ -10,6 +10,7 @@ import (
    "github.com/stripe/stripe-go/v74/checkout/session"
 )
 
+//  CreateProductWithPrice creates a product with a price in Stripe
 func CreateProductWithPrice(appTitle string, appDescription string, appPrice int64) (productID, priceID string, err error) {
    stripe.Key = constants.STRIPE_API_KEY
    product_params := &stripe.ProductParams{

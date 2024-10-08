@@ -1,5 +1,6 @@
 package constants
 
+// add constants here
 const (
     APP_INDEX = 
     USER_INDEX = 
