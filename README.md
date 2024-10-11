@@ -23,26 +23,34 @@ CloudShop is a cloud and React-based software marketplace platform designed to f
 - **Stripe API:** Facilitates efficient payment processing and financial transactions.
 
 ## Deployment
-- **Frontend:** Deployed using appropriate hosting platforms that support dynamic web applications, such as AWS, Vercel, or Netlify.
 - **Backend and Services:** Go microservices are deployed on Google App Engine, with ElasticSearch on Google Compute Engine.
 
 ## Technical Stack
 
 ```mermaid
-graph TB
-    A[CloudShop Platform] -->|Frontend| B[React & Ant Design]
-    A -->|Backend| C[Go & JWT Authentication]
-    A -->|Services| D[ElasticSearch & Stripe API]
-    A -->|Deployment| E[Hosting Platforms]
+graph TD
+    A[CloudShop Platform]
+    B[Frontend: React & Ant Design] --> A
+    C[Backend: Go & JWT Authentication] --> A
+    D[Services: ElasticSearch & Stripe API] --> A
+    E[Deployment: Hosting Platforms] --> A
+    F[On Google Cloud] --> E
+    G[Google App Engine] --> F
+    H[Google Compute Engine] --> F
 
-    E --> G[Backend & Services on Google Cloud]
+    classDef bigText fill:#ffffff,stroke:#3c6e71,stroke-width:1px,font-size:24px;
+    classDef mainNode fill:#d9f2e6,stroke:#3c6e71,stroke-width:3px,font-size:28px;
+    classDef frontendNode fill:#edf6f9,stroke:#457b9d,stroke-width:2px,font-size:24px;
+    classDef backendNode fill:#ffddd2,stroke:#e63946,stroke-width:2px,font-size:24px;
+    classDef servicesNode fill:#f4a261,stroke:#e76f51,stroke-width:2px,font-size:24px;
+    classDef deploymentNode fill:#e9c46a,stroke:#2a9d8f,stroke-width:2px,font-size:24px;
 
-    G --> H[Google App Engine]
-    G --> I[Google Compute Engine]
-
-    style G fill:#f9f,stroke:#333,stroke-width:2px
-    style H fill:#ccf,stroke:#333,stroke-width:1px
-    style I fill:#ccf,stroke:#333,stroke-width:1px
+    class A mainNode;
+    class B frontendNode;
+    class C backendNode;
+    class D servicesNode;
+    class E deploymentNode;
+    class F,G,H bigText;
 
 
 
